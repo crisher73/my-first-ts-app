@@ -1,3 +1,4 @@
+import { RandomFox } from '@/components/RandomFox'
 import Head from 'next/head'
 
 
@@ -14,6 +15,7 @@ export default function Home() {
       <h1 className="text-3xl font-bold underline">
       Hello Curly!
     </h1>
+    <RandomFox />
       </main>
       <footer></footer>
     </>
