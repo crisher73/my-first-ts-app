@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { NextPage } from 'next';
 import Head from 'next/head'
 import { RandomFox } from '@/components/RandomFox'
+import { MouseEventHandler } from 'react';
 
 
 // Generates a random number between 1 and 122
@@ -14,7 +15,7 @@ type ImageItem = { id: string; url: string }
 const Home: NextPage = () => {
   const [images, setImages] = useState<Array<ImageItem>>([]);
 
-  const addNewFox = () => {
+  const addNewFox: MouseEventHandler<HTMLButtonElement> = (event) => {
     const newImageItem = {
       id:generateId(),
       url: `https://randomfox.ca/images/${random()}.jpg`
